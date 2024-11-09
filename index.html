@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Riz Graphix Hub</title>
@@ -16,6 +16,7 @@
             background-image: url('background-image.jpg'); /* Replace with your desired background */
             background-size: cover;
             background-position: center;
+            transition: all 0.3s ease-in-out;
         }
 
         /* Header Section */
@@ -24,16 +25,19 @@
             color: white;
             padding: 40px 0;
             text-align: center;
+            animation: fadeIn 2s ease-in-out;
         }
 
         header h1 {
             font-size: 3.5em;
             margin: 0;
+            animation: slideIn 1s ease-out;
         }
 
         header p {
             font-size: 1.5em;
             margin: 10px 0;
+            animation: slideIn 1.5s ease-out;
         }
 
         header img {
@@ -41,12 +45,44 @@
             height: auto;
             margin-top: 20px;
             border-radius: 50%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header img:hover {
+            transform: scale(1.1); /* Logo hover animation */
+        }
+
+        /* Button Style */
+        .btn {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            margin: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f0a500;
+            transform: scale(1.1);
+        }
+
+        .btn-secondary {
+            background-color: #f0a500;
+        }
+
+        .btn-secondary:hover {
+            background-color: #ff6b6b;
         }
 
         /* Main Section */
         .main-content {
             text-align: center;
             padding: 50px;
+            animation: fadeIn 3s ease-in-out;
         }
 
         /* Business Description */
@@ -74,6 +110,9 @@
             background-color: #ffffff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+            max-width: 1200px;
+            margin: 50px auto;
         }
 
         .portfolio h2 {
@@ -83,10 +122,18 @@
         }
 
         .portfolio img {
-            width: 100%;
+            width: 80%; /* Smaller image size */
             height: auto;
             margin-bottom: 20px;
             border-radius: 10px;
+            opacity: 0;
+            animation: fadeInImage 1s forwards;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .portfolio div {
+            margin-bottom: 20px;
         }
 
         /* Footer Section */
@@ -132,6 +179,43 @@
                 font-size: 1em;
                 padding: 20px;
             }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+
+            .portfolio img {
+                width: 90%; /* Adjust for smaller screen sizes */
+            }
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -142,10 +226,11 @@
         <h1>Riz Graphix Hub</h1>
         <p>Your Creative Design Solution</p>
         <img src="rizgraphixhub.png" alt="Riz Graphix Hub Logo">
+        <a href="#services" class="btn">Explore Our Services</a>
     </header>
 
     <!-- Main Content -->
-    <div class="main-content">
+    <div class="main-content" id="services">
         <div class="business-description">
             <h2>Our Services</h2>
             <p>At Riz Graphix Hub, we specialize in bringing your brand to life with exceptional design solutions. Whether you're looking for a stunning logo, eye-catching business cards, engaging catalogs, or bold advertising posters, we create visually compelling designs that speak to your audience. Our team is dedicated to delivering high-quality, unique designs tailored to your specific needs, ensuring your business stands out in today's competitive market.</p>
@@ -157,6 +242,7 @@
                 <li><strong>Other Creative Designs:</strong> Banners, flyers, social media graphics, and more.</li>
             </ul>
             <p>Whether you’re a startup or an established business, Riz Graphix Hub is here to help elevate your brand with designs that make a difference.</p>
+            <a href="#contact" class="btn btn-secondary">Contact Us</a>
         </div>
 
         <!-- Portfolio Section -->
@@ -171,7 +257,7 @@
             <!-- Add more project examples below -->
         </div>
         
-        <div class="contact-info">
+        <div class="contact-info" id="contact">
             <h3>Contact Information</h3>
             <p>Email: <a href="mailto:rizgraphixhub@gmail.com">rizgraphixhub@gmail.com</a></p>
             <p>Phone: +917709539075</p>
