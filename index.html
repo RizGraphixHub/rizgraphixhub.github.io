@@ -7,7 +7,6 @@
     <title>Riz Graphix Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* General styles */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #e0e0e0;
@@ -20,222 +19,7 @@
             transition: all 0.3s ease-in-out;
         }
 
-        header {
-            background: linear-gradient(45deg, #ff6b6b, #f0a500);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 3.5em;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.5em;
-            margin: 10px 0;
-        }
-
-        header img {
-            width: 200px;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 50%;
-        }
-
-        .btn {
-            background-color: #ff6b6b;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            margin: 10px;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background-color: #f0a500;
-        }
-
-        /* Portfolio dropdown section */
-        .portfolio-dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .portfolio-dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            padding: 12px;
-        }
-
-        .portfolio-dropdown:hover .portfolio-dropdown-content {
-            display: block;
-        }
-
-        /* Portfolio Section */
-        .portfolio {
-            margin-top: 50px;
-            padding: 30px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            max-width: 1200px;
-            margin: 50px auto;
-            display: block; /* Ensure this is visible by default */
-        }
-
-        .portfolio h2 {
-            font-size: 2.5em;
-            color: #ff6b6b;
-            margin-bottom: 20px;
-        }
-
-        .portfolio img {
-            width: 80%;
-            height: auto;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            opacity: 1;
-            margin: 0 auto;
-            display: block;
-        }
-
-        /* Footer Section */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-
-        footer a {
-            color: #f0a500;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Styles */
-        @media screen and (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            header p {
-                font-size: 1.1em;
-            }
-
-            .portfolio img {
-                width: 90%;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Header Section -->
-    <header>
-        <h1>Riz Graphix Hub</h1>
-        <p>Your Creative Design Solution</p>
-        <img src="rizgraphixhub.png" alt="Riz Graphix Hub Logo">
-    </header>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <div class="portfolio-dropdown">
-            <a href="#" class="btn">View Portfolio</a>
-            <div class="portfolio-dropdown-content">
-                <p><a href="portfolio.html">Click here to view our full portfolio</a></p>
-                <p><a href="javascript:void(0)" onclick="togglePortfolio()">Show Portfolio Work</a></p>
-            </div>
-        </div>
-
-        <!-- Portfolio Section -->
-        <div class="portfolio" id="portfolioWork">
-            <h2>Portfolio</h2>
-            <p>Here are some of our recent design projects that showcase the creativity and quality of work we deliver:</p>
-            <div>
-                <h3>DC Super Kings Logo</h3>
-                <img src="images/Final_DCSuperKingsLogo.jpg" alt="DC Super Kings Logo">
-                <p>This logo was created for the DC Super Kings, representing power and modern aesthetics. It embodies the spirit of competition and strength.</p>
-            </div>
-            <div>
-                <h3>Maroon Gold Floral Ganesh Chaturthi Invitation</h3>
-                <img src="images/MaroonGoldFloralGaneshChaturthiInvitation.jpg" alt="Ganesh Chaturthi Invitation">
-                <p>A beautiful floral Ganesh Chaturthi invitation designed with rich colors and intricate patterns.</p>
-            </div>
-            <div>
-                <h3>Stepping Stone Design 1</h3>
-                <img src="images/STEPPING_STONE_1.jpg" alt="Stepping Stone Design 1">
-                <p>A creative stepping stone design representing growth and progress.</p>
-            </div>
-            <div>
-                <h3>Stepping Stone Design 2</h3>
-                <img src="images/STEPPING_STONE_2.jpg" alt="Stepping Stone Design 2">
-                <p>Another variation of the stepping stone design showcasing elegance.</p>
-            </div>
-            <div>
-                <h3>Design Sample 1</h3>
-                <img src="images/1.jpg" alt="Design Sample 1">
-                <p>An example of our creative and professional design work.</p>
-            </div>
-            <div>
-                <h3>Design Sample 2</h3>
-                <img src="images/2.jpg" alt="Design Sample 2">
-                <p>This design sample is a modern approach to visual branding.</p>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Riz Graphix Hub. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function togglePortfolio() {
-            var portfolio = document.getElementById('portfolioWork');
-            if (portfolio.style.display === 'none' || portfolio.style.display === '') {
-                portfolio.style.display = 'block';
-            } else {
-                portfolio.style.display = 'none';
-            }
-        }
-    </script>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Riz Graphix Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* General styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #e0e0e0;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background-image: url('background-image.jpg');
-            background-size: cover;
-            background-position: center;
-            transition: all 0.3s ease-in-out;
-        }
-
+        /* Header Section */
         header {
             background: linear-gradient(45deg, #ff6b6b, #f0a500);
             color: white;
@@ -268,6 +52,7 @@
             transform: scale(1.1);
         }
 
+        /* Button Style */
         .btn {
             background-color: #ff6b6b;
             color: white;
@@ -293,45 +78,29 @@
             background-color: #ff6b6b;
         }
 
-        /* Portfolio dropdown section */
-        .portfolio-dropdown {
-            position: relative;
-            display: inline-block;
+        /* Main Section */
+        .main-content {
+            text-align: center;
+            padding: 50px;
+            animation: fadeIn 3s ease-in-out;
         }
 
-        .portfolio-dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            padding: 12px;
-            z-index: 1;
-            animation: fadeInDropdown 0.5s ease-in-out;
+        /* Business Description */
+        .business-description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
-        .portfolio-dropdown:hover .portfolio-dropdown-content {
-            display: block;
-        }
-
-        /* Animation for fadeIn */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInDropdown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .business-description h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
         }
 
         /* Portfolio Section */
@@ -344,7 +113,6 @@
             animation: fadeIn 2s ease-in-out;
             max-width: 1200px;
             margin: 50px auto;
-            display: none;
         }
 
         .portfolio h2 {
@@ -358,10 +126,14 @@
             height: auto;
             margin-bottom: 20px;
             border-radius: 10px;
-            opacity: 1;
-            transition: opacity 1s ease-in-out;
+            opacity: 0;
+            animation: fadeInImage 1s forwards;
             margin: 0 auto;
             display: block;
+        }
+
+        .portfolio div {
+            margin-bottom: 20px;
         }
 
         /* Footer Section */
@@ -382,6 +154,17 @@
             text-decoration: underline;
         }
 
+        /* Contact Info */
+        .contact-info {
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
         /* Responsive Styles */
         @media screen and (max-width: 768px) {
             header h1 {
@@ -392,8 +175,46 @@
                 font-size: 1.1em;
             }
 
+            .business-description {
+                font-size: 1em;
+                padding: 20px;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+
             .portfolio img {
                 width: 90%;
+            }
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
             }
         }
     </style>
@@ -405,71 +226,47 @@
         <h1>Riz Graphix Hub</h1>
         <p>Your Creative Design Solution</p>
         <img src="rizgraphixhub.png" alt="Riz Graphix Hub Logo">
+        <a href="#services" class="btn">Explore Our Services</a>
     </header>
 
     <!-- Main Content -->
-    <div class="main-content">
-        <div class="portfolio-dropdown">
-            <a href="#" class="btn">View Portfolio</a>
-            <div class="portfolio-dropdown-content">
-                <p><a href="portfolio.html">Click here to view our full portfolio</a></p>
-                <p><a href="javascript:void(0)" onclick="togglePortfolio()">Show Portfolio Work</a></p>
-            </div>
+    <div class="main-content" id="services">
+        <div class="business-description">
+            <h2>Our Services</h2>
+            <p>At Riz Graphix Hub, we specialize in bringing your brand to life with exceptional design solutions. Whether you're looking for a stunning logo, eye-catching business cards, engaging catalogs, or bold advertising posters, we create visually compelling designs that speak to your audience. Our team is dedicated to delivering high-quality, unique designs tailored to your specific needs, ensuring your business stands out in today's competitive market.</p>
+            <ul>
+                <li><strong>Logo Design:</strong> Custom, professional logos that define your brand identity.</li>
+                <li><strong>Business Cards:</strong> Memorable business cards that leave a lasting impression.</li>
+                <li><strong>Catalogs & Brochures:</strong> Visually appealing layouts for your product or service catalogues.</li>
+                <li><strong>Posters & Advertisements:</strong> Designs that captivate and attract attention to your brand or event.</li>
+                <li><strong>Other Creative Designs:</strong> Banners, flyers, social media graphics, and more.</li>
+            </ul>
+            <p>Whether you’re a startup or an established business, Riz Graphix Hub is here to help elevate your brand with designs that make a difference.</p>
+            <a href="#contact" class="btn btn-secondary">Contact Us</a>
         </div>
 
         <!-- Portfolio Section -->
-        <div class="portfolio" id="portfolioWork">
+        <div class="portfolio">
             <h2>Portfolio</h2>
             <p>Here are some of our recent design projects that showcase the creativity and quality of work we deliver:</p>
             <div>
                 <h3>DC Super Kings Logo</h3>
-                <img src="images/Final_DCSuperKingsLogo.jpg" alt="DC Super Kings Logo">
+                <img src="Final%20DC%20Super%20Kings%20Logo.pdf.jpg" alt="DC Super Kings Logo">
                 <p>This logo was created for the DC Super Kings, representing power and modern aesthetics. It embodies the spirit of competition and strength.</p>
             </div>
             <div>
                 <h3>Maroon Gold Floral Ganesh Chaturthi Invitation</h3>
-                <img src="images/MaroonGoldFloralGaneshChaturthiInvitation.jpg" alt="Ganesh Chaturthi Invitation">
+                <img src="Maroon%20Gold%20Floral%20Ganesh%20Chaturthi%20Invitation.jpg" alt="Ganesh Chaturthi Invitation">
                 <p>A beautiful floral Ganesh Chaturthi invitation designed with rich colors and intricate patterns.</p>
             </div>
             <div>
                 <h3>Stepping Stone Design 1</h3>
-                <img src="images/STEPPING_STONE_1.jpg" alt="Stepping Stone Design 1">
+                <img src="STEPPING%20STONE%20(1).jpg" alt="Stepping Stone 1">
                 <p>A creative stepping stone design representing growth and progress.</p>
             </div>
             <div>
                 <h3>Stepping Stone Design 2</h3>
-                <img src="images/STEPPING_STONE_2.jpg" alt="Stepping Stone Design 2">
+                <img src="STEPPING%20STONE.jpg" alt="Stepping Stone">
                 <p>Another variation of the stepping stone design showcasing elegance.</p>
             </div>
-            <div>
-                <h3>Design Sample 1</h3>
-                <img src="images/1.jpg" alt="Design Sample 1">
-                <p>An example of our creative and professional design work.</p>
-            </div>
-            <div>
-                <h3>Design Sample 2</h3>
-                <img src="images/2.jpg" alt="Design Sample 2">
-                <p>This design sample is a modern approach to visual branding.</p>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Riz Graphix Hub. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function togglePortfolio() {
-            var portfolio = document.getElementById('portfolioWork');
-            if (portfolio.style.display === 'none' || portfolio.style.display === '') {
-                portfolio.style.display = 'block';
-            } else {
-                portfolio.style.display = 'none';
-            }
-        }
-    </script>
-
-</body>
-</html>
+            <
