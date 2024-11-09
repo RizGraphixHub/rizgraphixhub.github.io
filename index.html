@@ -47,11 +47,91 @@
             margin-bottom: 20px;
         }
 
-        .portfolio img {
+        /* Portfolio Image and Hover Dropdown */
+        .portfolio-item {
+            position: relative;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .portfolio-item img {
             width: 100%;
             height: auto;
-            margin-bottom: 20px;
             border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item .dropdown-content {
+            display: none;
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            animation: fadeInDropdown 0.5s ease-in-out;
+        }
+
+        .portfolio-item:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Animation for dropdown */
+        @keyframes fadeInDropdown {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        .contact-form h3 {
+            font-size: 2em;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #f0a500;
         }
 
         footer {
@@ -84,6 +164,10 @@
                 font-size: 1em;
                 padding: 20px;
             }
+
+            .contact-form {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -99,36 +183,65 @@
     <div class="portfolio">
         <h2>Portfolio</h2>
         <p>Here are some of our recent design projects that showcase the creativity and quality of work we deliver:</p>
-        <div>
+
+        <div class="portfolio-item">
             <h3>DC Super Kings Logo</h3>
             <img src="images/Final_DCSuperKingsLogo.jpg" alt="DC Super Kings Logo">
-            <p>This logo was created for the DC Super Kings, representing power and modern aesthetics. It embodies the spirit of competition and strength.</p>
+            <div class="dropdown-content">
+                <p>This logo was created for the DC Super Kings, representing power and modern aesthetics. It embodies the spirit of competition and strength.</p>
+            </div>
         </div>
-        <div>
+
+        <div class="portfolio-item">
             <h3>Maroon Gold Floral Ganesh Chaturthi Invitation</h3>
             <img src="images/MaroonGoldFloralGaneshChaturthiInvitation.jpg" alt="Ganesh Chaturthi Invitation">
-            <p>A beautiful floral Ganesh Chaturthi invitation designed with rich colors and intricate patterns.</p>
+            <div class="dropdown-content">
+                <p>A beautiful floral Ganesh Chaturthi invitation designed with rich colors and intricate patterns.</p>
+            </div>
         </div>
-        <div>
+
+        <div class="portfolio-item">
             <h3>Stepping Stone Design 1</h3>
             <img src="images/STEPPING_STONE_1.jpg" alt="Stepping Stone 1">
-            <p>A creative stepping stone design representing growth and progress.</p>
+            <div class="dropdown-content">
+                <p>A creative stepping stone design representing growth and progress.</p>
+            </div>
         </div>
-        <div>
+
+        <div class="portfolio-item">
             <h3>Stepping Stone Design 2</h3>
-            <img src="images/STEPPING_STONE_2.jpg" alt="Stepping Stone">
-            <p>Another variation of the stepping stone design showcasing elegance.</p>
+            <img src="images/STEPPING_STONE_2.jpg" alt="Stepping Stone 2">
+            <div class="dropdown-content">
+                <p>Another variation of the stepping stone design showcasing elegance.</p>
+            </div>
         </div>
-        <div>
+
+        <div class="portfolio-item">
             <h3>Design Sample 1</h3>
             <img src="images/1.jpg" alt="Design Sample 1">
-            <p>An example of our creative and professional design work.</p>
+            <div class="dropdown-content">
+                <p>An example of our creative and professional design work.</p>
+            </div>
         </div>
-        <div>
+
+        <div class="portfolio-item">
             <h3>Design Sample 2</h3>
             <img src="images/2.jpg" alt="Design Sample 2">
-            <p>This design sample is a modern approach to visual branding.</p>
+            <div class="dropdown-content">
+                <p>This design sample is a modern approach to visual branding.</p>
+            </div>
         </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-form">
+        <h3>Contact Us</h3>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 
     <!-- Footer Section -->
