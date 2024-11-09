@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio - Riz Graphix Hub</title>
+    <title>Riz Graphix Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* General Styling */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f7f7f7;
@@ -17,6 +15,7 @@
             padding: 0;
         }
 
+        /* Header Section */
         header {
             background: linear-gradient(45deg, #ff6b6b, #f0a500);
             color: white;
@@ -34,14 +33,37 @@
             margin: 10px 0;
         }
 
-        /* Portfolio Section Styling */
+        /* Main Section */
+        .main-content {
+            text-align: center;
+            padding: 50px;
+        }
+
+        /* Business Description */
+        .business-description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .business-description h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Portfolio Section */
         .portfolio {
             margin-top: 50px;
             padding: 30px;
             background-color: #ffffff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            transition: all 0.3s ease-in-out;
         }
 
         .portfolio h2 {
@@ -55,23 +77,9 @@
             height: auto;
             margin-bottom: 20px;
             border-radius: 10px;
-            opacity: 0;
-            animation: fadeInImage 1s forwards;
-            transition: opacity 1s ease-in-out;
         }
 
-        /* Keyframe for Fade-In Animation */
-        @keyframes fadeInImage {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Footer Styling */
+        /* Footer Section */
         footer {
             background-color: #333;
             color: white;
@@ -89,7 +97,18 @@
             text-decoration: underline;
         }
 
-        /* Media Queries for Smaller Screens */
+        /* Contact Info */
+        .contact-info {
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        /* Responsive Styles */
         @media screen and (max-width: 768px) {
             header h1 {
                 font-size: 2.5em;
@@ -99,69 +118,53 @@
                 font-size: 1.1em;
             }
 
-            .portfolio {
+            .business-description {
                 font-size: 1em;
                 padding: 20px;
             }
         }
     </style>
 </head>
-
 <body>
 
     <!-- Header Section -->
     <header>
         <h1>Riz Graphix Hub</h1>
-        <p>Our Portfolio</p>
+        <p>Your Creative Design Solution</p>
     </header>
 
-    <!-- Portfolio Section -->
-    <div class="portfolio">
-        <h2>Portfolio</h2>
-        <p>Here are some of our recent design projects that showcase the creativity and quality of work we deliver:</p>
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="business-description">
+            <h2>Our Services</h2>
+            <p>At Riz Graphix Hub, we specialize in bringing your brand to life with exceptional design solutions. Whether you're looking for a stunning logo, eye-catching business cards, engaging catalogs, or bold advertising posters, we create visually compelling designs that speak to your audience. Our team is dedicated to delivering high-quality, unique designs tailored to your specific needs, ensuring your business stands out in today's competitive market.</p>
+            <ul>
+                <li><strong>Logo Design:</strong> Custom, professional logos that define your brand identity.</li>
+                <li><strong>Business Cards:</strong> Memorable business cards that leave a lasting impression.</li>
+                <li><strong>Catalogs & Brochures:</strong> Visually appealing layouts for your product or service catalogues.</li>
+                <li><strong>Posters & Advertisements:</strong> Designs that captivate and attract attention to your brand or event.</li>
+                <li><strong>Other Creative Designs:</strong> Banners, flyers, social media graphics, and more.</li>
+            </ul>
+            <p>Whether you’re a startup or an established business, Riz Graphix Hub is here to help elevate your brand with designs that make a difference.</p>
+        </div>
 
-        <!-- Portfolio Items -->
-        <div>
-            <h3>DC Super Kings Logo</h3>
-            <img src="images/Final_DCSuperKingsLogo.jpg" alt="DC Super Kings Logo">
-            <p>This logo was created for the DC Super Kings, representing power and modern aesthetics. It embodies the spirit of competition and strength.</p>
+        <!-- Portfolio Section -->
+        <div class="portfolio">
+            <h2>Portfolio</h2>
+            <p>Here are some of our recent design projects that showcase the creativity and quality of work we deliver:</p>
+            <div>
+                <h3>DC Super Kings Logo</h3>
+                <img src="Final%20DC%20Super%20Kings%20Logo.pdf.jpg" alt="DC Super Kings Logo">
+                <p>This logo was created for the DC Super Kings, representing power and modern aesthetics. It embodies the spirit of competition and strength.</p>
+            </div>
+            <!-- Add more project examples below -->
         </div>
-        <div>
-            <h3>Maroon Gold Floral Ganesh Chaturthi Invitation</h3>
-            <img src="images/MaroonGoldFloralGaneshChaturthiInvitation.jpg" alt="Ganesh Chaturthi Invitation">
-            <p>A beautiful floral Ganesh Chaturthi invitation designed with rich colors and intricate patterns.</p>
+        
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Email: <a href="mailto:rizgraphixhub@gmail.com">rizgraphixhub@gmail.com</a></p>
+            <p>Phone: +917709539075</p>
         </div>
-        <div>
-            <h3>Stepping Stone Design 1</h3>
-            <img src="images/STEPPING_STONE_1.jpg" alt="Stepping Stone 1">
-            <p>A creative stepping stone design representing growth and progress.</p>
-        </div>
-        <div>
-            <h3>Stepping Stone Design 2</h3>
-            <img src="images/STEPPING_STONE_2.jpg" alt="Stepping Stone">
-            <p>Another variation of the stepping stone design showcasing elegance.</p>
-        </div>
-        <div>
-            <h3>Design Sample 1</h3>
-            <img src="images/1.jpg" alt="Design Sample 1">
-            <p>An example of our creative and professional design work.</p>
-        </div>
-        <div>
-            <h3>Design Sample 2</h3>
-            <img src="images/2.jpg" alt="Design Sample 2">
-            <p>This design sample is a modern approach to visual branding.</p>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="portfolio">
-        <h2>Contact Us</h2>
-        <p>Get in touch for more details about our services or to place an order:</p>
-        <ul>
-            <li>Email: <a href="mailto:info@rizgraphixhub.com">info@rizgraphixhub.com</a></li>
-            <li>Phone: +1 234 567 890</li>
-            <li>Location: Nizampur, India</li>
-        </ul>
     </div>
 
     <!-- Footer Section -->
@@ -170,5 +173,4 @@
     </footer>
 
 </body>
-
 </html>
